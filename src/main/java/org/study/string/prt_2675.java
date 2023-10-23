@@ -3,8 +3,7 @@ package org.study.string;
 import java.util.Scanner;
 //문자열 반복
 public class prt_2675 {
-
-    public static String result() {
+    public static void result() {
         int s = 0;
         int input = 0;
         String r = "";
@@ -27,7 +26,6 @@ public class prt_2675 {
             }
             System.out.println();
         }
-        return p;
     }
     public static void main(String[] args) {
         result();

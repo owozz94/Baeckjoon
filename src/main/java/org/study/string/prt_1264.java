@@ -3,7 +3,7 @@ package org.study.string;
 import java.util.Scanner;
 //모음의 개수
 public class prt_1264 {
-    public static int result() {
+    public static void result() {
         int result = 0;
         String strArr[] = {"a", "e", "i", "o", "u"};
         Scanner in = new Scanner(System.in);
@@ -26,7 +26,6 @@ public class prt_1264 {
             System.out.println(result);
             result=0;
         }
-        return result;
     }
     public static void main(String[] args) {
         result();

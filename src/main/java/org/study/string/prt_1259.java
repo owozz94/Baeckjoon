@@ -3,8 +3,7 @@ package org.study.string;
 import java.util.Scanner;
 //팰린드롬수 
 public class prt_1259 {
-
-    public static String result(){
+    public static void result(){
         String result="";
         Scanner in = new Scanner(System.in);
         while (true){
@@ -21,11 +20,8 @@ public class prt_1259 {
             }
 
         }
-
-        return result;
     }
     public static void main(String[] args) {
-
         result();
     }
 }

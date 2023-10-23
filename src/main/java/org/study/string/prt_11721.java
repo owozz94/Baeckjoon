@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 //열 개씩 끊어 출력하기
 public class prt_11721 {
-
-    public static String result(){
+    public static void result(){
         String sliceStr = "";
         String result="";
         int count=  0;
@@ -26,7 +25,6 @@ public class prt_11721 {
         for(String str : arr){
             System.out.println(str);
         }
-        return result;
     }
 
     public static void main(String[] args) {
