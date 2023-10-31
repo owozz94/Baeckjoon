@@ -12,7 +12,6 @@ public class prt_1264 {
         while (true) {
             inputArr = in.nextLine().toLowerCase();
             for (int k = 0; k < inputArr.length(); k++) {
-                
                 for (int i = 0; i < strArr.length; i++) {
                     //입력 값을 하나씩 잘라서 배열이랑 배교
                     strChr = String.valueOf(inputArr.charAt(k));
