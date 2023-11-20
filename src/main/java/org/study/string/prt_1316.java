@@ -1,29 +1,41 @@
 package org.study.string;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class prt_1316 {
-    public static void result() {
-        Scanner in = new Scanner(System.in);
-        int roopCount = Integer.parseInt(in.nextLine());
-        String input = "";
-        char[] chrArr = new char[roopCount];
-        boolean toggle = true;
-        for (int i = 0; i < roopCount; i++) {
-            input = in.nextLine();
-            chrArr = input.toCharArray();
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static boolean check() throws IOException {
+        boolean[] check = new boolean[26];
+        int prev = 0;
+        String str = br.readLine();
+        for(int i = 0; i<str.length();i++){
+            int now = str.charAt(i);
+
+       if(prev != now){
+           //character 타입 a = 97 h = 104  now - 'a' 니까 알파벳 순서대로 배열에 들어감.
+           if(check[now - 'a'] == false){
+               check[now -'a'] =true;
+               prev = now;
+           }else{
+               return false;
+           }
+       }else{
+           //이전 == 이후 인덱스가 같으면 연속된 수.
+           continue;
+    }
         }
-        //0번째 인덱스 기준으로 다음 인덱스가 같으면 continue, 다르면 true, 같은 문자가 나오면 false
-        for (int i = 0; i < chrArr.length; i++) {
-            for (int k = 1; k < chrArr.length; k++) {
-                if (String.valueOf(chrArr[i]).equals(String.valueOf(chrArr[k]))){
-                    continue;
-                }
+        return true;
+    }
+    public static void main(String[] args) throws IOException {
+        int count = 0;
+        int N = Integer.parseInt(br.readLine());
+        for(int i = 0; i< N ; i++){
+            if(check()){
+                count++;
             }
         }
-    }
-
-    public static void main(String[] args){
-        result();
+        System.out.println(count);
     }
 }
