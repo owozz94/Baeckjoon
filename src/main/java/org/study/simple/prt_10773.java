@@ -10,7 +10,6 @@ public class prt_10773 {
         Scanner in = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
         int k = in.nextInt();
-        int[] result = new int[k];
         int sum = 0;
         for(int i = 0; i < k; i++){
             int num = in.nextInt();

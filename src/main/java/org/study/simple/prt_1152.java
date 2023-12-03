@@ -1,7 +1,7 @@
 package org.study.simple;
 
 import java.util.Scanner;
-
+//단어의 개수
 public class prt_1152 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

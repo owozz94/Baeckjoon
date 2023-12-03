@@ -9,7 +9,7 @@ public class prt_2798 {
         int num = in.nextInt();
         int sum = 0;
         int M = in.nextInt();
-        int round = num/2 + 1; //총 도는 횟수
+        int round = num-2; //총 도는 횟수
         int[] arr = new int[num];
         ArrayList<Integer> maxArr = new ArrayList<>();
         for(int i = 0; i < num; i++){

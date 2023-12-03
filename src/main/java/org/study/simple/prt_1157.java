@@ -19,10 +19,11 @@ public class prt_1157 {
             alphabet[num] +=1;
         }
         for(int k = 0; k< alphabet.length; k++){
-            if(alphabet[k]>max){
+            if(alphabet[k]>max){ //1개 이상인 경우
                 max = alphabet[k];
-                chr = (char) (k + 'A');
-            }else if(alphabet[k] == max){
+                chr = (char) (k + 'A'); //영어출력력
+            }
+                else if(alphabet[k] == max){
                 chr = '?';
             }
         }

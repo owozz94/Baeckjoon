@@ -3,27 +3,22 @@ package org.study.simple;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class prt_2503 {
 
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int num = Integer.parseInt(st.nextToken());
-        int compareNum = 0;
-
+        int num = Integer.parseInt(st.nextToken()); //테스트케이스 갯수
         boolean[] check = new boolean[1000];
-
+        //초기 경우의 수
         for (int i = 123; i < 1000; i++) { //123~999
             String str = Integer.toString(i);
             if (str.charAt(0) == '0' || str.charAt(1) == '0' || str.charAt(2) == '0') {
                 continue;
             }
+            //각기 다른 숫자 3개
             if (str.charAt(0) == str.charAt(1) || str.charAt(1) == str.charAt(2) || str.charAt(0) == str.charAt(2)) {
                 continue;
             }
@@ -31,7 +26,7 @@ public class prt_2503 {
         }
         for (int a = 0; a < num; a++) {
             st = new StringTokenizer(br.readLine());
-            int req = Integer.parseInt(st.nextToken());
+            int req = Integer.parseInt(st.nextToken()); //비교값
             int strike = Integer.parseInt(st.nextToken());
             int ball = Integer.parseInt(st.nextToken());
             //모든 경우의 수 탐색

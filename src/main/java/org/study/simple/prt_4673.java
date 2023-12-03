@@ -1,7 +1,9 @@
 package org.study.simple;
 //셀프넘
 public class prt_4673 {
-    public static void main(String[] args) {        int[] check_list = new int[10001];
+    public static void main(String[] args) {
+        int[] check_list = new int[10001];
+        ////셀프넘버
         StringBuilder sb = new StringBuilder(); //결과값
         for (int i=1;i<10001;i++) {
             int n = d(i); //계산한 값이 들어있는 변수
